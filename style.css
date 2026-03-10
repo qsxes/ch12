@@ -1,0 +1,36 @@
+
+
+@keyframes movelight {
+    0%{
+        clip-path: circle(50px at -100% 50%);
+    }
+    50%{
+        clip-path: circle(50px at 200% 50%);
+    }
+    100%{
+        clip-path: circle(50px at -100% 50%);
+    }
+}
+h1::after{
+    width: 100px;
+    height: 100px;
+    content: "HelloWorld 向珅葳";
+    color: yellow;
+    position: absolute; 
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50px at 0% 50%);
+    animation: movelight 3s infinite;
+}
+h1{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: gray;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
